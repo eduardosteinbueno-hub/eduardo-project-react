@@ -8,7 +8,16 @@ function App() {
 
   return (
     <>
-    <h1>Iae gurizada</h1>
+      <div className='hero'>
+        
+        <h1>SENAI</h1>
+          <div className='links'>
+            <a href="">Inicio</a>
+            <a href="">Sobre o curso</a>
+            <a href="">Tecnologias</a>
+            <a href="">Projetos</a>
+          </div>
+      </div>
     </>
   )
 }
