@@ -8,7 +8,7 @@
 
 body {
   margin: 0;
-  background-image: url(./assets/ChatGPT\ Image\ 1\ de\ out.\ de\ 2026\,\ 16_51_32.png);
+  background-image: url(./assets/ChatGPT\ Image\ 5\ de\ out.\ de\ 2026\,\ 14_13_44.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body {
 h1 {
   color: white;
   font-size: 30px;
-  background-image: url("./assets/ChatGPT\ Image\ 1\ de\ out.\ de\ 2026\,\ 17_00_29.png");
+  background-image: url();
 }
 
 .links {
@@ -39,3 +39,278 @@ h1 {
   font-size: 16px;
 }
 
+.titulo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+    text-align: center;
+
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+
+    text-shadow: 2px 2px 8px black;
+}
+
+.titulo span {
+    color: #00e5ff;
+}
+
+.titulo strong {
+    color: #4dd0e1;
+}
+
+.conteudo {
+    padding: 50px 10%;
+    color: white;
+}
+
+.conteudo > h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 35px;
+    color: white;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.conteudo > h2 span {
+    color: #00e5ff;
+}
+
+.card {
+    max-width: 1000px;
+    margin: 0 auto 25px;
+    padding: 25px 30px;
+
+    background: rgba(3, 38, 76, 0.75);
+    border-left: 5px solid #00e5ff;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.card h3 {
+    color: #4dd0e1;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #f5faff;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.conhecimentos {
+    padding: 60px 8%;
+    background: rgba(3, 38, 76, 0.45);
+    color: white;
+    text-align: center;
+}
+
+.conhecimentos h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtitulo {
+    color: #ccefff;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.card-tec {
+    padding: 25px 20px;
+    min-height: 220px;
+
+    background: rgba(3, 38, 76, 0.78);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-top: 4px solid #00e5ff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.card-tec:hover {
+    transform: translateY(-8px);
+    border-color: #4dd0e1;
+    box-shadow: 0 12px 25px rgba(0, 229, 255, 0.25);
+}
+
+.card-tec span {
+    font-size: 38px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.card-tec h3 {
+    color: #4dd0e1;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.card-tec p {
+    color: #f1faff;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .conhecimentos h2 {
+        font-size: 28px;
+    }
+}
+
+.tecnologias {
+    padding: 60px 8%;
+    text-align: center;
+    color: white;
+}
+
+.tecnologias h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.tecnologias .subtitulo {
+    color: #ccefff;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.tecnologias-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.tec-card {
+    padding: 25px 15px;
+
+    background: rgba(3, 38, 76, 0.78);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.tec-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: #00e5ff;
+    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
+}
+
+.icone {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.tec-card h3 {
+    color: #4dd0e1;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.tec-card p {
+    color: #f5faff;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.profissoes {
+    padding: 60px 8%;
+    text-align: center;
+    color: white;
+}
+
+.profissoes h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.profissoes .subtitulo {
+    color: #ccefff;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.profissoes-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.profissao-card {
+    padding: 30px 22px;
+    min-height: 220px;
+
+    background: rgba(3, 38, 76, 0.78);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    border-top: 4px solid #00e5ff;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+.profissao-card:hover {
+    transform: translateY(-8px);
+    border-color: #00e5ff;
+    box-shadow: 0 12px 28px rgba(0, 229, 255, 0.3);
+}
+
+.profissao-card .icone {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.profissao-card h3 {
+    color: #4dd0e1;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.profissao-card p {
+    color: #f5faff;
+    font-size: 15px;
+    line-height: 1.6;
+}cd 
