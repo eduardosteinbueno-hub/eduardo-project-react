@@ -1,316 +1,747 @@
-
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  background-image: url(./assets/ChatGPT\ Image\ 5\ de\ out.\ de\ 2026\,\ 14_13_44.png);
+  background-image: url("./assets/ChatGPT Image 5 de out. de 2026, 14_13_44.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  font-family: Arial, sans-serif;
 }
+
+/* MENU */
 
 .hero {
   background-color: rgba(3, 38, 76, 0.88);
-  padding: 12px 120px;
+  padding: 12px 60px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-h1 {
+.hero h1 {
   color: white;
   font-size: 30px;
-  background-image: url();
 }
 
 .links {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  align-items: center;
 }
 
 .links a {
   color: white;
   font-size: 16px;
+
+  padding: 10px 18px;
+
+  border: 1px solid #00e5ff;
+  border-radius: 8px;
+
+  background: rgba(3, 38, 76, 0.6);
+
+  transition: 0.3s;
+}
+
+.links a:hover {
+  background: #00e5ff;
+  color: #03264c;
+
+  transform: translateY(-3px);
+}
+
+/* BANNER */
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .titulo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  width: 90%;
 
-    width: 90%;
-    text-align: center;
+  text-align: center;
 
-    font-size: 42px;
-    font-weight: bold;
-    color: white;
+  font-size: 42px;
+  font-weight: bold;
 
-    text-shadow: 2px 2px 8px black;
+  color: white;
+
+  text-shadow: 2px 2px 8px black;
 }
 
 .titulo span {
-    color: #00e5ff;
+  color: #00e5ff;
 }
 
 .titulo strong {
-    color: #4dd0e1;
+  color: #4dd0e1;
 }
 
+/* SOBRE O CURSO */
+
 .conteudo {
-    padding: 50px 10%;
-    color: white;
+  padding: 60px 10%;
+  color: white;
 }
 
 .conteudo > h2 {
-    text-align: center;
-    font-size: 38px;
-    margin-bottom: 35px;
-    color: white;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 35px;
+  color: white;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .conteudo > h2 span {
-    color: #00e5ff;
+  color: #00e5ff;
 }
 
 .card {
-    max-width: 1000px;
-    margin: 0 auto 25px;
-    padding: 25px 30px;
+  max-width: 1000px;
 
-    background: rgba(3, 38, 76, 0.75);
-    border-left: 5px solid #00e5ff;
-    border-radius: 12px;
+  margin: 0 auto 25px;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px);
+  padding: 25px 30px;
+
+  background: rgba(3, 38, 76, 0.75);
+
+  border-left: 5px solid #00e5ff;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+  backdrop-filter: blur(5px);
 }
 
 .card h3 {
-    color: #4dd0e1;
-    font-size: 22px;
-    margin-bottom: 12px;
+  color: #4dd0e1;
+
+  font-size: 22px;
+
+  margin-bottom: 12px;
 }
 
 .card p {
-    color: #f5faff;
-    font-size: 17px;
-    line-height: 1.7;
+  color: #f5faff;
+
+  font-size: 17px;
+
+  line-height: 1.7;
 }
 
+/* CONHECIMENTOS */
+
 .conhecimentos {
-    padding: 60px 8%;
-    background: rgba(3, 38, 76, 0.45);
-    color: white;
-    text-align: center;
+  padding: 60px 8%;
+
+  background: rgba(3, 38, 76, 0.45);
+
+  color: white;
+
+  text-align: center;
 }
 
 .conhecimentos h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-    color: white;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-size: 38px;
+
+  margin-bottom: 10px;
+
+  color: white;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .subtitulo {
-    color: #ccefff;
-    font-size: 17px;
-    margin-bottom: 40px;
+  color: #ccefff;
+
+  font-size: 17px;
+
+  margin-bottom: 40px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 25px;
+
+  max-width: 1200px;
+
+  margin: auto;
 }
 
 .card-tec {
-    padding: 25px 20px;
-    min-height: 220px;
+  padding: 25px 20px;
 
-    background: rgba(3, 38, 76, 0.78);
-    border: 1px solid rgba(0, 229, 255, 0.4);
-    border-top: 4px solid #00e5ff;
+  min-height: 220px;
 
-    border-radius: 15px;
+  background: rgba(3, 38, 76, 0.78);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 229, 255, 0.4);
 
-    transition: 0.3s;
+  border-top: 4px solid #00e5ff;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
 }
 
 .card-tec:hover {
-    transform: translateY(-8px);
-    border-color: #4dd0e1;
-    box-shadow: 0 12px 25px rgba(0, 229, 255, 0.25);
+  transform: translateY(-8px);
+
+  border-color: #4dd0e1;
+
+  box-shadow: 0 12px 25px rgba(0, 229, 255, 0.25);
 }
 
 .card-tec span {
-    font-size: 38px;
-    display: block;
-    margin-bottom: 15px;
+  font-size: 38px;
+
+  display: block;
+
+  margin-bottom: 15px;
 }
 
 .card-tec h3 {
-    color: #4dd0e1;
-    font-size: 21px;
-    margin-bottom: 12px;
+  color: #4dd0e1;
+
+  font-size: 21px;
+
+  margin-bottom: 12px;
 }
 
 .card-tec p {
-    color: #f1faff;
-    font-size: 15px;
-    line-height: 1.6;
+  color: #f1faff;
+
+  font-size: 15px;
+
+  line-height: 1.6;
 }
 
-@media (max-width: 900px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .conhecimentos h2 {
-        font-size: 28px;
-    }
-}
+/* TECNOLOGIAS */
 
 .tecnologias {
-    padding: 60px 8%;
-    text-align: center;
-    color: white;
+  padding: 60px 8%;
+
+  text-align: center;
+
+  color: white;
 }
 
 .tecnologias h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-size: 38px;
+
+  margin-bottom: 10px;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .tecnologias .subtitulo {
-    color: #ccefff;
-    font-size: 17px;
-    margin-bottom: 40px;
+  color: #ccefff;
+
+  font-size: 17px;
+
+  margin-bottom: 40px;
 }
 
 .tecnologias-grid {
-    max-width: 1100px;
-    margin: auto;
+  max-width: 1100px;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 22px;
 }
 
 .tec-card {
-    padding: 25px 15px;
+  padding: 25px 15px;
 
-    background: rgba(3, 38, 76, 0.78);
-    border: 1px solid rgba(0, 229, 255, 0.4);
-    border-radius: 15px;
+  background: rgba(3, 38, 76, 0.78);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 229, 255, 0.4);
 
-    transition: 0.3s;
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
 }
 
 .tec-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    border-color: #00e5ff;
-    box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
+  transform: translateY(-8px) scale(1.02);
+
+  border-color: #00e5ff;
+
+  box-shadow: 0 10px 25px rgba(0, 229, 255, 0.3);
 }
 
 .icone {
-    font-size: 38px;
-    margin-bottom: 12px;
+  font-size: 38px;
+
+  margin-bottom: 12px;
 }
 
 .tec-card h3 {
-    color: #4dd0e1;
-    font-size: 22px;
-    margin-bottom: 8px;
+  color: #4dd0e1;
+  font-size: 22px;
+  margin-bottom: 8px;
 }
 
 .tec-card p {
-    color: #f5faff;
-    font-size: 14px;
-    line-height: 1.5;
+  color: #f5faff;
+
+  font-size: 14px;
+
+  line-height: 1.5;
 }
 
+/* PROFISSÕES */
+
 .profissoes {
-    padding: 60px 8%;
-    text-align: center;
-    color: white;
+  padding: 60px 8%;
+
+  text-align: center;
+
+  color: white;
 }
 
 .profissoes h2 {
-    font-size: 38px;
-    margin-bottom: 10px;
-    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+  font-size: 38px;
+
+  margin-bottom: 10px;
+
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 .profissoes .subtitulo {
-    color: #ccefff;
-    font-size: 17px;
-    margin-bottom: 40px;
+  color: #ccefff;
+
+  font-size: 17px;
+
+  margin-bottom: 40px;
 }
 
 .profissoes-grid {
-    max-width: 1100px;
-    margin: auto;
+  max-width: 1100px;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
 }
 
 .profissao-card {
-    padding: 30px 22px;
-    min-height: 220px;
+  padding: 30px 22px;
 
-    background: rgba(3, 38, 76, 0.78);
-    border: 1px solid rgba(0, 229, 255, 0.4);
-    border-top: 4px solid #00e5ff;
+  min-height: 220px;
 
-    border-radius: 15px;
+  background: rgba(3, 38, 76, 0.78);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 229, 255, 0.4);
 
-    transition: 0.3s;
+  border-top: 4px solid #00e5ff;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
 }
 
 .profissao-card:hover {
-    transform: translateY(-8px);
-    border-color: #00e5ff;
-    box-shadow: 0 12px 28px rgba(0, 229, 255, 0.3);
+  transform: translateY(-8px);
+
+  border-color: #00e5ff;
+
+  box-shadow: 0 12px 28px rgba(0, 229, 255, 0.3);
 }
 
 .profissao-card .icone {
-    font-size: 40px;
-    margin-bottom: 15px;
+  font-size: 40px;
+
+  margin-bottom: 15px;
 }
 
 .profissao-card h3 {
-    color: #4dd0e1;
-    font-size: 21px;
-    margin-bottom: 12px;
+  color: #4dd0e1;
+
+  font-size: 21px;
+
+  margin-bottom: 12px;
 }
 
 .profissao-card p {
-    color: #f5faff;
+  color: #f5faff;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+/* CHAMADA */
+
+.chamada {
+  margin-top: 60px;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(3, 38, 76, 0.95),
+    rgba(0, 150, 190, 0.85)
+  );
+
+  text-align: center;
+
+  color: white;
+
+  border-top: 2px solid #00e5ff;
+
+  border-bottom: 2px solid #00e5ff;
+
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.25);
+}
+
+.chamada-conteudo {
+  max-width: 850px;
+
+  margin: auto;
+}
+
+.chamada-icone {
+  font-size: 50px;
+
+  display: block;
+
+  margin-bottom: 15px;
+}
+
+.chamada h2 {
+  font-size: 42px;
+
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.chamada p {
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: #eafaff;
+
+  margin-bottom: 30px;
+}
+
+.chamada p strong {
+  color: #00e5ff;
+}
+
+.botao-curso {
+  display: inline-block;
+
+  padding: 14px 30px;
+
+  background: #00e5ff;
+
+  color: #03264c;
+
+  border-radius: 30px;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+  transition: 0.3s;
+}
+
+.botao-curso:hover {
+  transform: translateY(-4px);
+
+  background: white;
+
+  box-shadow: 0 8px 25px rgba(0, 229, 255, 0.4);
+}
+
+/* RODAPÉ */
+
+.rodape {
+  background: #021d3a;
+
+  color: white;
+
+  padding-top: 45px;
+
+  border-top: 2px solid #00e5ff;
+}
+
+.rodape-conteudo {
+  max-width: 1100px;
+
+  margin: auto;
+
+  padding: 0 30px 35px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 40px;
+}
+
+.rodape-titulo h2 {
+  color: white;
+
+  font-size: 24px;
+
+  margin-bottom: 10px;
+}
+
+.rodape-titulo p {
+  color: #4dd0e1;
+
+  font-size: 18px;
+
+  font-weight: bold;
+}
+
+.rodape-info {
+  text-align: right;
+}
+
+.rodape-info p {
+  color: #d9f7ff;
+
+  margin: 7px 0;
+
+  font-size: 15px;
+}
+
+.rodape-info strong {
+  color: #4dd0e1;
+}
+
+.rodape-final {
+  padding: 18px;
+
+  text-align: center;
+
+  background: #01152b;
+
+  border-top: 1px solid rgba(0, 229, 255, 0.25);
+}
+
+.rodape-final p {
+  color: #9edce8;
+
+  font-size: 14px;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 12px 30px;
+  }
+
+  .links {
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .links a {
+    font-size: 14px;
+
+    padding: 8px 12px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tecnologias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profissoes-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titulo {
+    font-size: 36px;
+  }
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+  body {
+    background-attachment: scroll;
+  }
+
+  .hero {
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 15px 20px;
+  }
+
+  .hero h1 {
+    font-size: 27px;
+  }
+
+  .links {
+    width: 100%;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 8px;
+  }
+
+  .links a {
+    padding: 8px 10px;
+
+    font-size: 13px;
+  }
+
+  .banner {
+    min-height: 400px;
+  }
+
+  .titulo {
+    font-size: 29px;
+
+    line-height: 1.3;
+  }
+
+  .conteudo {
+    padding: 45px 6%;
+  }
+
+  .conteudo > h2 {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 19px;
+  }
+
+  .card p {
     font-size: 15px;
-    line-height: 1.6;
-}cd 
+  }
+
+  .conhecimentos {
+    padding: 50px 6%;
+  }
+
+  .conhecimentos h2,
+  .tecnologias h2,
+  .profissoes h2 {
+    font-size: 28px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .tecnologias {
+    padding: 50px 6%;
+  }
+
+  .tecnologias-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profissoes {
+    padding: 50px 6%;
+  }
+
+  .profissoes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chamada {
+    padding: 60px 20px;
+
+    margin-top: 30px;
+  }
+
+  .chamada h2 {
+    font-size: 30px;
+  }
+
+  .chamada p {
+    font-size: 16px;
+  }
+
+  .botao-curso {
+    padding: 12px 25px;
+  }
+
+  .rodape-conteudo {
+    flex-direction: column;
+
+    text-align: center;
+
+    padding: 0 20px 30px;
+  }
+
+  .rodape-info {
+    text-align: center;
+  }
+
+  .rodape-titulo h2 {
+    font-size: 20px;
+  }
+
+}
